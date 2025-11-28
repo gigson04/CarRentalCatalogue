@@ -29,15 +29,42 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            panelLogo = new Panel();
+            button1 = new Button();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.BackColor = Color.FromArgb(51, 51, 76);
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(panelLogo);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(215, 541);
             panel1.TabIndex = 0;
+            // 
+            // panelLogo
+            // 
+            panelLogo.Dock = DockStyle.Top;
+            panelLogo.Location = new Point(0, 0);
+            panelLogo.Name = "panelLogo";
+            panelLogo.Size = new Size(215, 75);
+            panelLogo.TabIndex = 0;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.White;
+            button1.Dock = DockStyle.Top;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Location = new Point(0, 75);
+            button1.Name = "button1";
+            button1.Size = new Size(215, 60);
+            button1.TabIndex = 1;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = false;
             // 
             // FormMenu
             // 
@@ -49,11 +76,14 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormMenu";
             Text = "FormMenu";
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
+        private Panel panelLogo;
+        private Button button1;
     }
 }
